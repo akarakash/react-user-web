@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card1:hover{
+    /* cursor: pointer; */
+    box-shadow: 0px 12px 30px 0px rgb(48, 31, 31);
+    box-shadow: 18px 18px 45px rgb(110, 110, 63);
+    transform: scale(1.1);
+    width: 500px;
+    transition: all 500ms;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  .phone{
+    color: rgb(235, 152, 27);
+  }
+  .rownd-icon{
+    height: 70px;
+    width: 70px;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 50%;
+  }
+ .bg-color{
   color: white;
-}
+  padding: 40px;
+  margin: 20px 0px 0px 0px ;
+ }
+ .offer{
+  color: red;
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .vivo{
+  color: rgb(255, 0, 0);
+ }
+ .logo1{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0px 30px 0px 20px;
+ }
+ .wall{
+  height: 700px;
+ }
+ .instant{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  font-weight: 600;
+ }
+ .bg-vivo{
+  background-color: rgb(238, 237, 237);
+ }
+ .text-colors{
+  color: red;
+ }
+ .form-page{
+  align-items: center;
+  display: flex ;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgb(239, 238, 238);
+  margin-top: 50px;
+  box-shadow: 18px 18px 45px rgb(63, 96, 110);
+   border-radius: 5px;
+ }
+ .have{
+  margin-top: 10px;
+ }
+ 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
