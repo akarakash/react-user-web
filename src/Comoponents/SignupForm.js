@@ -5,6 +5,8 @@ import { SiGnuprivacyguard } from "react-icons/si";
 
 const SignupForm = () => {
   const [email, setEmail] = useState('');
+  const [number, setNumber] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -34,6 +36,32 @@ const SignupForm = () => {
         Sign Up
       </Typography>
       <form onSubmit={handleSubmit}>
+      <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          id="name"
+          label="User Name"
+          name="text"
+          autoComplete="text"
+          autoFocus
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+         <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          id="number"
+          label="Phone-Number"
+          name="number"
+          autoComplete="number"
+          autoFocus
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+        />
         <TextField
           variant="outlined"
           margin="normal"
