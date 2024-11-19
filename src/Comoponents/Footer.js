@@ -11,14 +11,16 @@ function Footer() {
       <Container>
         <Row>
             <Col xs={12} md={3} className='d-flex flex-column gap-3'>
-            <h3>Our Store</h3>
+            <h3  data-aos="fade-up"
+        data-aos-duration="1000">Our Store</h3>
             <div>Miniture is one of the biggest international fashion companies, one of the world’s largest distribution groups.</div>
             <div className='d-flex gap-3 fs-2'>
                 <span><FaFacebookSquare/></span><span><FaSquareXTwitter/></span><span><FaSquareInstagram/></span><span><FaSquarePinterest/></span>
             </div>
             </Col>
             <Col xs={12} md={3} className='d-flex flex-column gap-2  my-3 my-md-0'>
-            <h3>Quick links</h3>
+            <h3  data-aos="fade-up"
+        data-aos-duration="1000">Quick links</h3>
             <a href='' className='text-decoration-none'>
                 <div>My account</div>
             </a>
@@ -33,7 +35,8 @@ function Footer() {
             </a>
             </Col>
             <Col xs={12} md={3} className='d-flex flex-column gap-2'>
-            <h3>Information</h3>
+            <h3  data-aos="fade-up"
+        data-aos-duration="1000">Information</h3>
             <a href='' className='text-decoration-none'>
                 <div>My account</div>
             </a>
@@ -49,7 +52,8 @@ function Footer() {
             </a>
             </Col>
             <Col xs={12} md={3} className='d-flex flex-column gap-3 mt-3 mt-md-0'>
-            <h2>Let’s get in touch</h2>
+            <h2  data-aos="fade-up"
+        data-aos-duration="1000">Let’s get in touch</h2>
             <div>Sign up for our newsletter and receive 10% off your</div>
             <input placeholder='Enter Your Email Address..' className='p-2 w-100 rounded-1' />
             </Col>

@@ -20,7 +20,6 @@ import Footer from './Footer';
 function IphonePage() {
   return (
     <div>
-        <Navbarr/>
         <div>
             <img className='w-100 wall' src={wall}/>
          </div>
@@ -56,27 +55,27 @@ function IphonePage() {
         <Row>
         <Col xs={12} md={3}>
               <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={iPhone1}  style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">i phone 15</Card.Title>
-                      <Card.Text>
-                        <h5>$ 1199.00</h5>
-                      <div>Resolution: 830x950</div>
+                    <Card style={{ width: "100%" }}>
+                      <Card.Img variant="top" src={iPhone1}  className='img' style={{height:'300px'}}/>
+                      <Card.Body>
+                        <Card.Title className="fs-3">i phone 15</Card.Title>
+                        <Card.Text>
+                          <h5>$ 1199.00</h5>
+                        <div>Resolution: 830x950</div>
 
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
+                        </Card.Text>
+                        <Button className="bg-danger border-danger">
+                        Buy Now
+                        </Button>
+                      </Card.Body>
+                    </Card>
               </div>
             </Col>
 
             <Col xs={12} md={3}  className='my-3 my-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={iPhone2}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={iPhone2}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">i phone 13</Card.Title>
                       <Card.Text>
@@ -95,7 +94,7 @@ function IphonePage() {
             <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={iPhone3}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={iPhone3}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">i phone 14</Card.Title>
                       <Card.Text>
@@ -114,7 +113,7 @@ function IphonePage() {
             <Col xs={12} md={3}  className='mt-3 mt-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={iPhone4}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={iPhone4}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">i phone x</Card.Title>
                       <Card.Text>
@@ -132,7 +131,6 @@ function IphonePage() {
         </Row>
       </div>
          </Container>
-      <Footer/>
     </div>
   )
 }

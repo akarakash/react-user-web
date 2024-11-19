@@ -20,7 +20,6 @@ import { MdOutlineLocalOffer } from "react-icons/md";
 function OnePlus() {
   return (
     <div>
-    <Navbarr/>
     <div>
         <img className='w-100 wall' src={wall}/>
      </div>
@@ -57,7 +56,7 @@ function OnePlus() {
         <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one1}  style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={one1}  className='img' style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">OnePlus 11 </Card.Title>
                       <Card.Text>
@@ -76,7 +75,7 @@ function OnePlus() {
             <Col xs={12} md={3} className='my-3 my-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one2}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={one2}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">OnePlus 10 pro</Card.Title>
                       <Card.Text>
@@ -95,7 +94,7 @@ function OnePlus() {
             <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one3}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={one3}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">OnePlus 9</Card.Title>
                       <Card.Text>
@@ -113,7 +112,7 @@ function OnePlus() {
             <Col xs={12} md={3} className='mt-3 mt-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one4}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={one4}  className='img' style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">OnePlus 7 pro</Card.Title>
                       <Card.Text>
@@ -131,7 +130,6 @@ function OnePlus() {
         </Row>
       </div>
      </Container>
-  <Footer/>
 </div>
   )
 }

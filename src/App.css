@@ -1,58 +1,67 @@
-.card1:hover{
-    /* cursor: pointer; */
-    box-shadow: 0px 12px 30px 0px rgb(48, 31, 31);
-    box-shadow: 18px 18px 45px rgb(110, 110, 63);
-    transform: scale(1.1);
-    width: 500px;
-    transition: all 500ms;
-  }
+.card1:hover {
+  /* cursor: pointer; */
+  box-shadow: 0px 12px 30px 0px rgb(48, 31, 31);
+  box-shadow: 18px 18px 45px rgb(110, 110, 63);
+  transform: scale(1.1);
+  width: 500px;
+  transition: all 500ms;
+}
 
-  .phone{
-    color: rgb(235, 152, 27);
-  }
-  .rownd-icon{
-    height: 70px;
-    width: 70px;
-    border: 2px solid rgb(206, 206, 206);
-    border-radius: 50%;
-  }
- .bg-color{
+.phone {
+  color: rgb(235, 152, 27);
+}
+
+.rownd-icon {
+  height: 70px;
+  width: 70px;
+  border: 2px solid rgb(206, 206, 206);
+  border-radius: 50%;
+}
+
+.bg-color {
   color: white;
   padding: 40px;
-  margin: 20px 0px 0px 0px ;
- }
- .offer{
-  color: red;
- }
+  margin: 20px 0px 0px 0px;
+}
 
- .vivo{
+.offer {
+  color: red;
+}
+
+.vivo {
   color: rgb(255, 0, 0);
- }
- .logo1{
+}
+
+.logo1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin: 0px 30px 0px 20px;
- }
- .wall{
+}
+
+.wall {
   height: 700px;
- }
- .instant{
+}
+
+.instant {
   align-items: center;
   display: flex;
   justify-content: center;
   height: 100%;
   font-weight: 600;
- }
- .bg-vivo{
+}
+
+.bg-vivo {
   background-color: rgb(238, 237, 237);
- }
- .text-colors{
+}
+
+.text-colors {
   color: red;
- }
- .form-page{
+}
+
+.form-page {
   align-items: center;
-  display: flex ;
+  display: flex;
   flex-direction: column;
   height: 630px;
   justify-content: center;
@@ -60,13 +69,24 @@
   border: 1px solid rgb(239, 238, 238);
   margin-top: 50px;
   box-shadow: 18px 18px 45px rgb(63, 96, 110);
-   border-radius: 5px;
- }
- .have{
+  border-radius: 5px;
+}
+
+.have {
   margin-top: 10px;
- }
- 
+}
 
-
-
-
+/* .form-bg-color{
+  background-color: lightcyan;
+} */
+.carousel-control-next-icon {
+  display: none !important;
+}
+.carousel-control-prev-icon {
+  display: none !important;
+}
+.img:hover{
+  transform: scale(1.1);
+  width: 300px;
+  transition: all 500ms;
+}

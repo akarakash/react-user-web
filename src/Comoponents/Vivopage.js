@@ -17,7 +17,6 @@ import Footer from './Footer';
 function Vivopage() {
   return (
     <div>
-    <Navbarr/>
     <div>
         <img className='w-100 wall' src={wall}/>
      </div>
@@ -45,13 +44,13 @@ function Vivopage() {
   </Container>
      </div>
      <Container>
-     <h2>Products..</h2>
+     <h2 className='my-3'>Products..</h2>
      <div className='my-5'>
         <Row>
         <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo1}  style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={vivo1}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">vivo x100</Card.Title>
                       <Card.Text>
@@ -70,7 +69,7 @@ function Vivopage() {
             <Col xs={12} md={3} className='my-3 my-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo2}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={vivo2}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">vivo v29</Card.Title>
                       <Card.Text>
@@ -89,7 +88,7 @@ function Vivopage() {
             <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo3}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={vivo3}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">vivo Y17</Card.Title>
                       <Card.Text>
@@ -108,7 +107,7 @@ function Vivopage() {
             <Col xs={12} md={3} className='mt-3 mt-my-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo4}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={vivo4}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">vivo V25e</Card.Title>
                       <Card.Text>
@@ -126,7 +125,7 @@ function Vivopage() {
         </Row>
       </div>
      </Container>
-  <Footer/>
+
 </div>
   )
 }

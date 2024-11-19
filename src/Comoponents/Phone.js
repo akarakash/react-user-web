@@ -23,6 +23,7 @@ import { FaShippingFast } from "react-icons/fa";
 import { RiTyphoonLine } from "react-icons/ri";
 import { RiMoneyEuroCircleFill } from "react-icons/ri";
 import { MdOutlinePayment } from "react-icons/md";
+import Reactplayer from './Reactplayer';
 
 function Phone() {
   return (
@@ -35,10 +36,10 @@ function Phone() {
         <Row>
         <Col xs={12} md={3}>
               <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={iPhone1}  style={{height:'300px'}}/>
+                  <Card  style={{ width: "100%" }}>
+                    <Card.Img variant="top" src={iPhone1} className='img'  style={{height:'300px'}}/>
                     <Card.Body>
-                      <Card.Title className="fs-3">i phone 15</Card.Title>
+                      <Card.Title className="fs-3">i phone 15 pro </Card.Title>
                       <Card.Text>
                         <h5>$ 1199.00</h5>
                       <div>Resolution: 830x950</div>
@@ -55,7 +56,7 @@ function Phone() {
             <Col xs={12} md={3} className='my-3 my-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={iPhone2}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={iPhone2}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">i phone 13</Card.Title>
                       <Card.Text>
@@ -76,7 +77,7 @@ function Phone() {
             <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={iPhone3}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={iPhone3}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">i phone 14</Card.Title>
                       <Card.Text>
@@ -95,7 +96,7 @@ function Phone() {
             <Col xs={12} md={3} className='mt-3 mt-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={iPhone4}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={iPhone4}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">i phone x</Card.Title>
                       <Card.Text>
@@ -121,7 +122,7 @@ function Phone() {
         <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo1}  style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={vivo1}  className='img' style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">vivo x100</Card.Title>
                       <Card.Text>
@@ -140,7 +141,7 @@ function Phone() {
             <Col xs={12} md={3} className='my-3 my-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo2}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={vivo2}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">vivo v29</Card.Title>
                       <Card.Text>
@@ -159,7 +160,7 @@ function Phone() {
             <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo3}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={vivo3}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">vivo Y17</Card.Title>
                       <Card.Text>
@@ -178,7 +179,7 @@ function Phone() {
             <Col xs={12} md={3} className='mt-3 mt-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo4}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={vivo4}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">vivo V25e</Card.Title>
                       <Card.Text>
@@ -202,7 +203,7 @@ function Phone() {
         <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one1}  style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={one1}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">OnePlus 11 </Card.Title>
                       <Card.Text>
@@ -221,7 +222,7 @@ function Phone() {
             <Col xs={12} md={3} className='my-3 my-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one2}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={one2}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">OnePlus 10 pro</Card.Title>
                       <Card.Text>
@@ -240,7 +241,7 @@ function Phone() {
             <Col xs={12} md={3}>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one3}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={one3}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">OnePlus 9</Card.Title>
                       <Card.Text>
@@ -258,7 +259,7 @@ function Phone() {
             <Col xs={12} md={3} className='my-3 my-md-0'>
               <div>
                   <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one4}   style={{height:'300px'}}/>
+                    <Card.Img variant="top" src={one4}  className='img'  style={{height:'300px'}}/>
                     <Card.Body>
                       <Card.Title className="fs-3">OnePlus 7 pro</Card.Title>
                       <Card.Text>
@@ -310,6 +311,9 @@ function Phone() {
           </div>
           </Col>
         </Row>
+      </div>
+      <div>
+        <Reactplayer/>
       </div>
      </Container>
     </div>
