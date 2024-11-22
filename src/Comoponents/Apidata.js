@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Row, Col, Container } from "react-bootstrap";
-import iphonebanner from "../images/iphonepage33.jpg";
+import iphonebanner from "../image-2/iphonepage33.jpg";
 import iPhone1 from "../image-2/iphone_14_PNG19.png";
-import iPhone2 from "../image-2/iphone3333.png";
-import iPhone3 from "../image-2/iphone22.avif";
-import iPhone4 from "../image-2/iphone-4.0.jpeg";
-import vivobanner from "../images/vivopage-1.jpg";
+import iPhone2 from "../image-2/iphone 13.jpeg";
+import iPhone3 from "../image-2/iphone12.png";
+import iPhone4 from "../image-2/iphone-SE.jpeg";
+import vivobanner from "../image-2/vivopage-1.jpg";
 import vivo1 from "../image-2/vivo-1.jpeg";
 import vivo2 from "../image-2/vivo-2.jpeg";
 import vivo3 from "../image-2/vivo-3.jpeg";
 import vivo4 from "../image-2/vivo-4.jpeg";
-import wall from "../images/oneplus-333.jpg";
+import wall from "../image-2/oneplus-333.jpg";
 import one1 from "../image-2/one plus-1.png";
 import one2 from "../image-2/one plus-2.jpeg";
 import one3 from "../image-2/one plus-3.jpeg";
@@ -159,7 +159,7 @@ function Apidata() {
     products.map((product, index) => (
       <Col md={6} lg={3} key={index}>
        <Card style={{ width: "250px", height: "" }}>
-                    <Card.Img variant="top" src={product.image}  className='w-100' style={{height:'auto'}}/>
+                    <Card.Img variant="top" src={product.image}  className='img-fluid' style={{height:'auto'}}/>
                     <Card.Body>
                       <Card.Title className="fs-5">{product.name}</Card.Title>
                       <Card.Text>

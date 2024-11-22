@@ -2,9 +2,9 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import img4 from "../images/i phone img.jpg";
-import img5 from "../images/vivo-x100-teaser-1.jpg";
-import img6 from "../images/OnePlus-11-Review-AM-AH-26.jpg";
+import img4 from "../image-2/i phone img.jpg";
+import img5 from "../image-2/vivo-x100-teaser-1.jpg";
+import img6 from "../image-2/OnePlus-11-Review-AM-AH-26.jpg";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import '../App.css'

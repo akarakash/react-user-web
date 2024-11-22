@@ -1,50 +1,58 @@
-import React from 'react'
-import { useState } from 'react';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import img1 from '../images/wallimg1.jpg';
-import img2 from '../images/wallimg2.jpg';
-import img3 from '../images/wallimg4.jpg';
-
+import banner1 from "../image-2/iphonebanner1.jpg"
+import banner2 from "../image-2/vivobanner2.jpg"
+import banner3 from "../image-2/wallimg4.jpg"
 function Banner() {
-    const [index, setIndex] = useState(0);
+  // const [index, setIndex] = useState(0);
+  // const [data, setData] = useState([]);
+  // const [banner, setBanner] = useState([]);
+  
+  // const GitUrl =
+  //   "https://raw.githubusercontent.com/akarakash/react-user-web/refs/heads/main/src/image-2/";
 
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
+  // useEffect(() => {
+  //   GetData(); // Fetch data on mount
+  // }, []);
+
+  // const GetData = () => {
+  //   axios
+  //     .get("https://670e4b65073307b4ee464347.mockapi.io/product-api")
+  //     .then((response) => {
+  //       const fetchedData = response.data;
+  //       setData(fetchedData);  // Set data from API
+
+  //       const filterData = fetchedData.filter((items) => items.brand === "all");
+  //       setBanner(filterData);  // Set filtered banner data
+  //     });
+  // };
+
+  // const handleSelect = (selectedIndex) => {
+  //   setIndex(selectedIndex);  // Update selected index
+  // };
+
   return (
     <div>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+       <Carousel>
       <Carousel.Item>
-        <img style={{height:'90vh'}}
-        className='d-block w-100'
-        src={img1}
-        alt='first slide'
-        />
-        <Carousel.Caption>
-        
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img style={{height:'90vh'}}
-        className='d-block w-100'
-        src={img2}
-        alt=''
-        />
+        <img src={banner1} style={{width:"100%", height:"90vh"}} />
         <Carousel.Caption>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <img style={{height:'90vh'}}
-        className='d-block w-100'
-        src={img3}
-        alt=''
-        />
+        <img src={banner2} style={{width:"100%", height:"90vh"}} />
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={banner3} style={{width:"100%" , height:"90vh"}} />
         <Carousel.Caption>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
     </div>
-  )
+  );
 }
 
 export default Banner;

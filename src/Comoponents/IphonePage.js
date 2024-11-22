@@ -3,15 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Navbarr from './Navbarr';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import wall from "../images/iphonepage33.jpg";
-import pic1 from "../images/iphone-15-blue-select-202309_AV2.jpeg";
-import pic2 from "../images/iphone-15-blue-witb-202309.jpeg";
-import pic3 from "../images/iphone-15-cables-witb-202309.jpeg";
+import wall from "../image-2/iphone 13.jpeg";
+import pic1 from "../image-2/iphone-15-blue-select-202309_AV2.jpeg";
+import pic2 from "../image-2/iphone-15-blue-witb-202309.jpeg";
+import pic3 from "../image-2/iphone-15-cables-witb-202309.jpeg";
 
-import iPhone1 from "../image-2/iphone_14_PNG19.png";
-import iPhone2 from "../image-2/iphone3333.png";
-import iPhone3 from "../image-2/iphone22.avif";
-import iPhone4 from "../image-2/iphone-4.0.jpeg";
+import iPhone1 from "../image-2/iphone---12.jpeg";
+import iPhone2 from "../image-2/iphone 13.jpeg";
+import iPhone3 from "../image-2/iphone111.jpeg";
+import iPhone4 from "../image-2/iphone-SE.jpeg";
 
 
 import { Row, Col } from "react-bootstrap";

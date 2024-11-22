@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
-import iphinepic from "../images/iphone---12.jpeg";
-import vivo from "../images/vivo----pic2.jpg";
-import one from "../images/oneplus----3.jpeg";
+import iphinepic from "../image-2/iphone---pic-photo1.jpg";
+import vivo from "../image-2/vivo----pic2.jpg";
+import one from "../image-2/oneplus----3.jpeg";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { BiSolidOffer } from "react-icons/bi";
 

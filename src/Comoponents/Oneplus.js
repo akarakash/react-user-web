@@ -3,10 +3,10 @@ import Container from 'react-bootstrap/Container';
 import Navbarr from './Navbarr';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import wall from "../images/oneplus-333.jpg";
-import pic1 from "../images/oneplus-2.jpeg";
-import pic2 from "../images/oneplus-34.webp";
-import pic3 from "../images/oneplus-44.jpeg";
+import wall from "../image-2/oneplus-333.jpg";
+import pic1 from "../image-2/one plus-2.jpeg";
+import pic2 from "../image-2/oneplus-34.webp";
+import pic3 from "../image-2/oneplus-44.jpeg";
 
 import one1 from "../image-2/one plus-1.png";
 import one2 from "../image-2/one plus-2.jpeg";

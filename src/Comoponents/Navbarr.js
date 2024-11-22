@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaCircleUser } from "react-icons/fa6";
-import logo from '../images/logo-2.webp'
+import logo from '../image-2/logo-1.jpg'
 import { Link } from 'react-router-dom';
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Form from 'react-bootstrap/Form';

@@ -17,14 +17,13 @@ function App() {
       <Router>
         <Navbarr/>
         <Routes>
-          <Route path='/apipage/:id' element={<Apidata/>}/>
+          <Route path='/apipage/:id' element={<Apidata/>}/> 
           <Route path='/' element={<Home/>}/>
           <Route path='/iphonePage' element={<IphonePage/>}/>
           <Route path='/vivopage' element={<Vivopage/>}/>
           <Route path='/onePlus' element={<OnePlus/>}/>
           <Route path='/form' element={<FormL/>}/>
-          {/* <Route path='/popup' element={<Popup/>}/> */}
-          <Route path='/signup' element={<SignupForm/>}/> 
+         <Route path='/popup' element={<Popup/>}/> 
         </Routes>
         <Footer/>
       </Router>

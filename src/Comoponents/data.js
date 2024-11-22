@@ -1,20 +1,20 @@
 import React from 'react'
-import iphonebanner from "../image-2/iphone33.png";
-import iPhone1 from "../image-2/iphone_14_PNG19.png";
-import iPhone2 from "../image-2/iphone3333.png";
+import iphonebanner from "../image-2/iphone 13.jpeg";
+import iPhone1 from "../image-2/iphonepage33.jpg";
+// import iPhone2 from "../image-2/iphone3333.png";
 import iPhone3 from "../image-2/iphone22.avif";
-import iPhone4 from "../image-2/iphone-4.0.jpeg";
-import vivobanner from "../images/vivopage-1.jpg";
+// import iPhone4 from "../image-2/iphone-4.0.jpeg/\
+import vivobanner from "../image-2/vivobanner2.jpg";
 import vivo1 from "../image-2/vivo-1.jpeg";
 import vivo2 from "../image-2/vivo-2.jpeg";
 import vivo3 from "../image-2/vivo-3.jpeg";
 import vivo4 from "../image-2/vivo-4.jpeg";
-import wall from "../images/oneplus-333.jpg";
+import wall from "../image-2/oneplus-333.jpg";
 import one1 from "../image-2/one plus-1.png";
 import one2 from "../image-2/one plus-2.jpeg";
 import one3 from "../image-2/one plus-3.jpeg";
 import one4 from "../image-2/one plus-4.jpeg";
-const data = [
+ export const data = [
     {
      "id": "0",
      "name": "I Phone",
@@ -32,7 +32,7 @@ const data = [
           brand: "iphone",
         },
         {
-          image: iPhone2,
+          image: iPhone1,
           name: "I Phone 14 ",
           price: "$ 859.88",
           resolution: " 730x850",
@@ -52,7 +52,7 @@ const data = [
           brand: "iphone",
         },
         {
-          image: iPhone4,
+          image: iPhone1,
           name: "I Phone x",
           price: "$ 399.45",
           resolution: " 630x750",

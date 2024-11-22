@@ -3,9 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Navbarr from './Navbarr';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import wall from "../images/vivopage-1.jpg";
-import pic1 from "../images/vivopage-2.jpeg";
-import pic2 from "../images/vivopage-3.jpeg";
+import wall from "../image-2/vivopage-1.jpg";
+import pic1 from "../image-2/vivopage-2.jpeg";
+import pic2 from "../image-2/vivopage-3.jpeg";
 
 import vivo1 from "../image-2/vivo-1.jpeg";
 import vivo2 from "../image-2/vivo-2.jpeg";
