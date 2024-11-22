@@ -1,20 +1,16 @@
 import React from 'react'
 import Banner from './Banner'
 import CardPage from './CardPage'
-import Phone from './Phone'
 import Iphone from './Iphone'
 import { useNavigate } from 'react-router-dom'
+import Phone from './Phone'
 
 function Home() {
-
-//  const navigate = useNavigate();
-   
-//   navigate(`/apipage/`)
   return (
     <>
-      <Banner/> 
+     <Banner/> 
      <CardPage/>
-      {/* <Phone/>  */}
+     <Phone/>
      <Iphone/> 
      
     </>

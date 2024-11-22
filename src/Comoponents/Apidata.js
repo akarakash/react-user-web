@@ -19,14 +19,15 @@ import one3 from "../image-2/one plus-3.jpeg";
 import one4 from "../image-2/one plus-4.jpeg";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import data from "./data";
 const api = [
   {
-   "id": "1",
-   "name": "I Phone",
-   "banner": iphonebanner,
-    "title": "iphone is nice  to use",
-    "products": [
+    id: "1",
+    name: "I Phone",
+    banner: iphonebanner,
+    title: "iphone is nice  to use",
+    products: [
       {
         image: iPhone1,
         name: "I Phone 15 Pro Max",
@@ -54,11 +55,11 @@ const api = [
     ],
   },
   {
-    "id": "2",
-    "name": "Vivo",
+    id: "2",
+    name: "Vivo",
     banner: vivobanner,
-    "title": "vivo is nice  to use",
-    "products": [
+    title: "vivo is nice  to use",
+    products: [
       {
         image: vivo1,
         name: "vivo y30",
@@ -86,12 +87,11 @@ const api = [
     ],
   },
   {
-        
-    "id": "3",
-    "name": "oneplus",
+    id: "3",
+    name: "oneplus",
     banner: wall,
-    "title": "oneplus is nice  to use",
-    "products": [
+    title: "oneplus is nice  to use",
+    products: [
       {
         image: one1,
         name: "oneplus nortEC3 Lite",
@@ -126,57 +126,64 @@ function Apidata() {
   const [title, setTitle] = useState("");
   const [products, setProducts] = useState([]);
   const { id } = useParams();
-
+ const navigate =useNavigate();
   useEffect(() => {
-    const vivo = api.filter((item) => item.id ==id);
+    const vivo = api.filter((item) => item.id == id);
     console.log(vivo);
 
     setName(vivo[0].name);
-    setBanner(vivo [0].banner);
-    setTitle(vivo [0].title);
-    setProducts(vivo [0].products);
+    setBanner(vivo[0].banner);
+    setTitle(vivo[0].title);
+    setProducts(vivo[0].products);
 
-    console.log(products);
     
   }, []);
-
-  return(
+  console.log(products);
+  const handleClick = (id) => {
+    console.log(id);
+    navigate(`/productsdetails/${id}`)
+  };
+  return (
     <div>
       <img
-          style={{ height: '80vh' }}
-          className='w-100 d-block vh-50'
-          src={banner}
-          alt=''
-        />
-         <h2 className='mt-5'><i>{title ? title : 'NO data'}</i></h2>
-        <Container>
+        style={{ height: "80vh" }}
+        className="w-100 d-block vh-50"
+        src={banner}
+        alt=""
+      />
+      <h2 className="mt-5">
+        <i>{title ? title : "NO data"}</i>
+      </h2>
+      <Container>
         <Row>
-  {products.length === 0 ? (
-    <Col>
-      <p>No products available</p>
-    </Col>
-  ) : (
-    products.map((product, index) => (
-      <Col md={6} lg={3} key={index}>
-       <Card style={{ width: "250px", height: "" }}>
-                    <Card.Img variant="top" src={product.image}  className='img-fluid' style={{height:'auto'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-5">{product.name}</Card.Title>
-                      <Card.Text>
-                        <h5>{product.price}</h5>
-                        <Card.Text>{product.category}</Card.Text>
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-      </Col>
-    ))
-  )}
-</Row>
-        </Container>
-
+          {products.length === 0 ? (
+            <Col>
+              <p>No products available</p>
+            </Col>
+          ) : (
+            products.map((product, index) => (
+              <Col md={6} lg={3} key={index} onClick={() => handleClick(index)}>
+                <Card style={{ width: "250px", height: "" }}>
+                  <Card.Img
+                    variant="top"
+                    src={product.image}
+                    className="img-fluid"
+                    style={{ height: "auto" }}
+                  />
+                  <Card.Body>
+                    <Card.Title className="fs-5">{product.name}</Card.Title>
+                    <Card.Text>
+                      <h5>{product.price}</h5>
+                      <Card.Text>{product.category}</Card.Text>
+                    </Card.Text>
+                    <Button className="bg-danger border-danger">Buy Now</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))
+          )}
+        </Row>
+      </Container>
     </div>
   );
 }

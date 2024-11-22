@@ -87,6 +87,6 @@
 }
 .img:hover{
   transform: scale(1.1);
-  width: 300px;
+  width: 300 px;
   transition: all 500ms;
 }

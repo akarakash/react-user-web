@@ -4,20 +4,36 @@ import Navbarr from './Navbarr';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import wall from "../image-2/oneplus-333.jpg";
-import pic1 from "../image-2/one plus-2.jpeg";
+import pic1 from "../image-2/oneplus-2.jpeg";
 import pic2 from "../image-2/oneplus-34.webp";
 import pic3 from "../image-2/oneplus-44.jpeg";
-
+import { useEffect,useState } from 'react';
+import axios from 'axios';
 import one1 from "../image-2/one plus-1.png";
-import one2 from "../image-2/one plus-2.jpeg";
-import one3 from "../image-2/one plus-3.jpeg";
-import one4 from "../image-2/one plus-4.jpeg";
+
 
 import { Row, Col } from "react-bootstrap";
 import Footer from './Footer';
 import { MdOutlineLocalOffer } from "react-icons/md";
 
 function OnePlus() {
+  const giturl ="https://raw.githubusercontent.com/akarakash/react-user-web/refs/heads/main/src/image-2/"
+
+  const [value, setValue] =useState([]);
+    useEffect(()=>{
+      GetData();
+    },[])
+    const GetData = () => {
+      axios.get("https://670e4b65073307b4ee464347.mockapi.io/product-api")
+        .then(response => setValue(response.data))
+        .catch(error => {
+          console.error("Error fetching data:", error);
+          
+        });
+    };
+         
+        const filterdata =value.filter((item)=>item.brand == "oneplus")
+         console.log(filterdata);
   return (
     <div>
     <div>
@@ -53,80 +69,28 @@ function OnePlus() {
      <h2>Products..</h2>
      <div className='my-5'>
         <Row>
-        <Col xs={12} md={3}>
-              <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one1}  className='img' style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">OnePlus 11 </Card.Title>
-                      <Card.Text>
-                      <h5>$ 599.00</h5>
-                      <div>Resolution: 450x550</div>
+          {filterdata.map((item)=>
+          <Col xs={12} md={3}>
+          <div>
+              <Card style={{ width: "100%" }} className='mt-4'>
+                <Card.Img variant="top" src={giturl+item.image}  className='img' style={{height:'300px'}}/>
+                <Card.Body>
+                  <Card.Title className="fs-3">{item.name}</Card.Title>
+                  <Card.Text>
+                  <h5>$ {item.price}</h5>
+                  <div>Resolution: 450x550</div>
 
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-              </div>
-            </Col>
+                  </Card.Text>
+                  <Button className="bg-danger border-danger">
+                  Buy Now
+                  </Button>
+                </Card.Body>
+              </Card>
+          </div>
+        </Col>
+          )}
+        
 
-            <Col xs={12} md={3} className='my-3 my-md-0'>
-              <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one2}  className='img'  style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">OnePlus 10 pro</Card.Title>
-                      <Card.Text>
-                      <h5>$ 499.00</h5>
-                      <div>Resolution: 430x550</div>
-
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-              </div>
-            </Col>
-
-            <Col xs={12} md={3}>
-              <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one3}  className='img'  style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">OnePlus 9</Card.Title>
-                      <Card.Text>
-                      <h5>$ 759.34</h5>
-                      <div>Resolution: 530x650</div>
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-              </div>
-            </Col>
-
-            <Col xs={12} md={3} className='mt-3 mt-md-0'>
-              <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={one4}  className='img' style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">OnePlus 7 pro</Card.Title>
-                      <Card.Text>
-                      <h5>$ 199.42</h5>
-                      <div>Resolution: 630x750</div>
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-               
-              </div>
-            </Col>
         </Row>
       </div>
      </Container>

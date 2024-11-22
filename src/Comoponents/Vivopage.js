@@ -7,14 +7,29 @@ import wall from "../image-2/vivopage-1.jpg";
 import pic1 from "../image-2/vivopage-2.jpeg";
 import pic2 from "../image-2/vivopage-3.jpeg";
 
-import vivo1 from "../image-2/vivo-1.jpeg";
-import vivo2 from "../image-2/vivo-2.jpeg";
-import vivo3 from "../image-2/vivo-3.jpeg";
-import vivo4 from "../image-2/vivo-4.jpeg";
+import { useEffect,useState } from 'react';
+import axios from 'axios';
 
 import { Row, Col } from "react-bootstrap";
 import Footer from './Footer';
 function Vivopage() {
+  const giturl ="https://raw.githubusercontent.com/akarakash/react-user-web/refs/heads/main/src/image-2/"
+
+  const [value, setValue] =useState([]);
+    useEffect(()=>{
+      GetData();
+    },[])
+    const GetData = () => {
+      axios.get("https://670e4b65073307b4ee464347.mockapi.io/product-api")
+        .then(response => setValue(response.data))
+        .catch(error => {
+          console.error("Error fetching data:", error);
+          
+        });
+    };
+         
+        const filterdata =value.filter((item)=>item.brand == "vivo")
+         console.log(filterdata);
   return (
     <div>
     <div>
@@ -47,81 +62,26 @@ function Vivopage() {
      <h2 className='my-3'>Products..</h2>
      <div className='my-5'>
         <Row>
-        <Col xs={12} md={3}>
-              <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo1}  className='img'  style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">vivo x100</Card.Title>
-                      <Card.Text>
-                      <h5>$ 450.34</h5>
-                      <div>Resolution: 530x650</div>
+          {filterdata.map((item)=>
+          <Col xs={12} md={3} className='mt-4'>
+          <div>
+              <Card style={{ width: "100%" }}>
+                <Card.Img variant="top" src={giturl+item.image}  className='img'  style={{height:'300px'}}/>
+                <Card.Body>
+                  <Card.Title className="fs-3">{item.name}</Card.Title>
+                  <Card.Text>
+                  <h5>$ {item.price}</h5>
+                  <div>Resolution: 530x650</div>
 
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-              </div>
-            </Col>
-
-            <Col xs={12} md={3} className='my-3 my-md-0'>
-              <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo2}  className='img'  style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">vivo v29</Card.Title>
-                      <Card.Text>
-                      <h5>$ 399.00</h5>
-                      <div>Resolution: 630x750</div>
-
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-              </div>
-            </Col>
-
-            <Col xs={12} md={3}>
-              <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo3}  className='img'  style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">vivo Y17</Card.Title>
-                      <Card.Text>
-                      <h5>$ 359.35</h5>
-                      <div>Resolution: 730x850</div>
-
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-              </div>
-            </Col>
-
-            <Col xs={12} md={3} className='mt-3 mt-my-0'>
-              <div>
-                  <Card style={{ width: "100%" }}>
-                    <Card.Img variant="top" src={vivo4}  className='img'  style={{height:'300px'}}/>
-                    <Card.Body>
-                      <Card.Title className="fs-3">vivo V25e</Card.Title>
-                      <Card.Text>
-                      <h5>$ 245.23</h5>
-                      <div>Resolution: 630x750</div>
-
-                      </Card.Text>
-                      <Button className="bg-danger border-danger">
-                      Buy Now
-                      </Button>
-                    </Card.Body>
-                  </Card>
-              </div>
-            </Col>
+                  </Card.Text>
+                  <Button className="bg-danger border-danger">
+                  Buy Now
+                  </Button>
+                </Card.Body>
+              </Card>
+          </div>
+        </Col>
+          )}
         </Row>
       </div>
      </Container>

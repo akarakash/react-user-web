@@ -9,6 +9,9 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import { SiGnuprivacyguard } from "react-icons/si";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from "react-router-dom";
 
 const SignupForm = () => {
   const [email, setEmail] = useState("");
@@ -18,21 +21,28 @@ const SignupForm = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
 
+  const nav = useNavigate();
+  const notify = () => toast("signup successfully..!");
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+  
+    setName('')
+    setEmail('')                      
+    setNumber('')
+    setPassword('')
 
     if (password !== confirmPassword) {
-      setMessage("Passwords do not match");
+      setMessage("Passwords you enter do not match");
       return;
     }
-
     try {
       const response = await axios.post(
-        "https://your-api-endpoint.com/signup",
-        { email, password }
+        "https://670e4b65073307b4ee464347.mockapi.io/adminUser",
+        { name,email,number,password }
       );
       setMessage("Signup successful!");
-      console.log(response.data);
+      nav("/login")
     } catch (error) {
       setMessage("Signup failed. Try again.");
       console.error("Error:", error);
@@ -40,7 +50,7 @@ const SignupForm = () => {
   };
 
   return (
-    <Container maxWidth="xs" className="form-page">
+    <Container maxWidth="xs" className="form-page text-center">
       <SiGnuprivacyguard className="fs-2" />
       <Typography
         variant="h4"
@@ -117,12 +127,12 @@ const SignupForm = () => {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
-        <Button type="submit" fullWidth variant="contained" color="primary">
+        <Button type="submit" fullWidth variant="contained" color="primary" onClick={notify}>
           Sign Up
         </Button>
         <Grid container>
           <Grid item>
-            <Link top={"/form"} href="/form" variant="body2" className="mt-3">
+            <Link top={"/login"} href="/login" variant="body2" className="mt-3">
               Already have an account? Login
             </Link>
           </Grid>
@@ -133,6 +143,7 @@ const SignupForm = () => {
           </Typography>
         )}
       </form>
+      <ToastContainer/>
     </Container>
   );
 };

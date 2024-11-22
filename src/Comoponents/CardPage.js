@@ -18,7 +18,7 @@ function CardPage() {
         <div className=" my-4">
           <Row>
             <Col xs={12} md={4} className="my-3 my-md-0 ">
-               <Link to={'/apipage/1'} className="text-decoration-none">
+               <Link to={'/iphonepage'} className="text-decoration-none">
                <a href="" className="text-decoration-none">
                   <Card  className="card1"  style={{ width: "100%" }}>
                     <Card.Img variant="top" src={img4} />
@@ -37,7 +37,7 @@ function CardPage() {
                </Link>
             </Col>
             <Col xs={12} md={4}>
-                <Link to={'/apipage/2'} className="text-decoration-none">
+                <Link to={'/vivopage'} className="text-decoration-none">
                 <a href="" className="text-decoration-none">
                   <Card className="card1" style={{ width: "100%" }}>
                     <Card.Img variant="top" src={img5} />
@@ -57,7 +57,7 @@ function CardPage() {
             </Col>
 
             <Col xs={12} md={4}  className="my-3 my-md-0 ">
-                <Link to={'/apipage/3'} className="text-decoration-none">
+                <Link to={'/onePlus'} className="text-decoration-none">
                 <a href="" className="text-decoration-none">
                   <Card  className="card1" style={{ width: "100%" }}>
                     <Card.Img

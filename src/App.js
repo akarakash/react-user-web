@@ -1,15 +1,15 @@
 import './App.css';
 import Home from './Comoponents/Home';
-import IphonePage from './Comoponents/IphonePage';
-import OnePlus from './Comoponents/Oneplus';
-import Vivopage from './Comoponents/Vivopage';
-import FormL from "./Comoponents/FormL";
 import { BrowserRouter as Router, Routes,Route} from "react-router-dom";
-import Popup from './Comoponents/Popup';
-import SignupForm from './Comoponents/SignupForm';
 import Apidata from './Comoponents/Apidata';
 import Navbarr from './Comoponents/Navbarr';
 import Footer from './Comoponents/Footer';
+import Login from './Comoponents/Login';
+import Productsdetails from './Comoponents/Productsdetails';
+// import Iphone from './Comoponents/Iphone';
+import Vivopage from './Comoponents/Vivopage';
+import OnePlus from './Comoponents/Oneplus';
+import IphonePage from './Comoponents/IphonePage';
 function App() {
   return (
     <div>
@@ -17,13 +17,17 @@ function App() {
       <Router>
         <Navbarr/>
         <Routes>
+        <Route path='/' element={<Home/>}/>
           <Route path='/apipage/:id' element={<Apidata/>}/> 
-          <Route path='/' element={<Home/>}/>
-          <Route path='/iphonePage' element={<IphonePage/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/productsdetails/:id' element={<Productsdetails/>}/>
           <Route path='/vivopage' element={<Vivopage/>}/>
+           <Route path='/iphonePage' element={<IphonePage/>}/> 
+
+          
+          
           <Route path='/onePlus' element={<OnePlus/>}/>
-          <Route path='/form' element={<FormL/>}/>
-         <Route path='/popup' element={<Popup/>}/> 
+         {/* <Route path='/popup' element={<Popup/>}/>     */}
         </Routes>
         <Footer/>
       </Router>
