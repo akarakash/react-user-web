@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
-import Navbarr from './Navbarr';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import wall from "../image-2/oneplus-333.jpg";
@@ -8,8 +7,9 @@ import pic1 from "../image-2/oneplus-2.jpeg";
 import pic2 from "../image-2/oneplus-34.webp";
 import pic3 from "../image-2/oneplus-44.jpeg";
 import { useEffect,useState } from 'react';
+import { useParams } from "react-router-dom";
 import axios from 'axios';
-import one1 from "../image-2/one plus-1.png";
+import { useNavigate } from "react-router-dom";
 
 
 import { Row, Col } from "react-bootstrap";
@@ -18,6 +18,8 @@ import { MdOutlineLocalOffer } from "react-icons/md";
 
 function OnePlus() {
   const giturl ="https://raw.githubusercontent.com/akarakash/react-user-web/refs/heads/main/src/image-2/"
+  const { id } = useParams();
+  const navigate =useNavigate();
 
   const [value, setValue] =useState([]);
     useEffect(()=>{
@@ -34,6 +36,12 @@ function OnePlus() {
          
         const filterdata =value.filter((item)=>item.brand == "oneplus")
          console.log(filterdata);
+         
+         const handleClick = (id) => {
+          console.log(id);
+          navigate(`/productsdetails/${id}`)
+        };
+
   return (
     <div>
     <div>
@@ -70,7 +78,7 @@ function OnePlus() {
      <div className='my-5'>
         <Row>
           {filterdata.map((item)=>
-          <Col xs={12} md={3}>
+          <Col xs={12} md={3} onClick={() => handleClick(item.id)}>
           <div>
               <Card style={{ width: "100%" }} className='mt-4'>
                 <Card.Img variant="top" src={giturl+item.image}  className='img' style={{height:'300px'}}/>

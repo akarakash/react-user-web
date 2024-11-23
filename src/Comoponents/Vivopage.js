@@ -6,14 +6,16 @@ import Card from "react-bootstrap/Card";
 import wall from "../image-2/vivopage-1.jpg";
 import pic1 from "../image-2/vivopage-2.jpeg";
 import pic2 from "../image-2/vivopage-3.jpeg";
-
+import { useParams } from "react-router-dom";
 import { useEffect,useState } from 'react';
 import axios from 'axios';
-
+import { useNavigate } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
 import Footer from './Footer';
 function Vivopage() {
   const giturl ="https://raw.githubusercontent.com/akarakash/react-user-web/refs/heads/main/src/image-2/"
+  const { id } = useParams();
+  const navigate =useNavigate();
 
   const [value, setValue] =useState([]);
     useEffect(()=>{
@@ -30,6 +32,12 @@ function Vivopage() {
          
         const filterdata =value.filter((item)=>item.brand == "vivo")
          console.log(filterdata);
+
+         const handleClick = (id) => {
+          console.log(id);
+          navigate(`/productsdetails/${id}`)
+        };
+
   return (
     <div>
     <div>
@@ -63,7 +71,7 @@ function Vivopage() {
      <div className='my-5'>
         <Row>
           {filterdata.map((item)=>
-          <Col xs={12} md={3} className='mt-4'>
+          <Col xs={12} md={3} className='mt-4'onClick={() => handleClick(item.id)}>
           <div>
               <Card style={{ width: "100%" }}>
                 <Card.Img variant="top" src={giturl+item.image}  className='img'  style={{height:'300px'}}/>

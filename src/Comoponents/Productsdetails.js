@@ -7,73 +7,40 @@ import iPhone3 from "../image-2/iphone12.png";
 import iPhone4 from "../image-2/iphone-SE.jpeg";
 import vivo1 from "../image-2/vivo-1.jpeg";
 import { Container, Row, Col } from "react-bootstrap";
-
-const apidata = [
-  {
-    id: "0",
-    image: iPhone1,
-    name: "I Phone 15 Pro Max",
-    price: "$ 1199.00",
-    category: "iphone",
-    description:
-      "128 GB ROM, 15.49 cm (6.1 inch) Super Retina XDR Display, 48MP + 12MP | 12MP Front Camera, A16 Bionic Chip, 6 Core Processor Processor",
-  },
-  {
-    id: "1",
-    image: iPhone2,
-    name: "I Phone 14 ",
-    price: "$ 859.88",
-    category: "iphone",
-    description:
-      "128 GB ROM, 15.49 cm (6.1 inch) Super Retina XDR Display, 48MP + 12MP | 12MP Front Camera, A16 Bionic Chip, 6 Core Processor Processor",
-  },
-  {
-    id: "2",
-    image: iPhone3,
-    name: "I Phone 13",
-    price: "$ 799.00",
-    category: "iphone",
-    description:
-      "128 GB ROM, 15.49 cm (6.1 inch) Super Retina XDR Display, 48MP + 12MP | 12MP Front Camera, A16 Bionic Chip, 6 Core Processor Processor",
-  },
-  {
-    id: "3",
-    image: iPhone4,
-    name: "I Phone x",
-    price: "$ 399.45",
-    category: "iphone",
-    description:
-      "128 GB ROM, 15.49 cm (6.1 inch) Super Retina XDR Display, 48MP + 12MP | 12MP Front Camera, A16 Bionic Chip, 6 Core Processor Processor",
-  },
-  {
-    id:"4",
-    image: vivo1,
-    name: "vivo y30",
-    price: "$ 1199.00",
-    category: "vivo",
-    description:
-      "128 GB ROM, 15.49 cm (6.1 inch) Super Retina XDR Display, 48MP + 12MP | 12MP Front Camera, A16 Bionic Chip, 6 Core Processor Processor",
-  },
-];
+import axios from "axios";
+import { responsiveFontSizes } from "@mui/material";
  
 
 function Productsdetails() {
+    const giturl ="https://raw.githubusercontent.com/akarakash/react-user-web/refs/heads/main/src/image-2/"
   const { id } = useParams();
   const [value, setValue] = useState([]);
-  useEffect(() => {
-    const filters = apidata.filter((item) => item.id == id);
-    setValue(filters);
-  }, []);
+  useEffect(()=>{
+    GetData();
+  },[])
+
+  const GetData = () => {
+    axios.get("https://670e4b65073307b4ee464347.mockapi.io/product-api")
+      .then(response => setValue(response.data))
+      .catch(error => {
+        console.error("Error fetching data:", error);
+        
+      });
+  };
 console.log(value);
+
+     const filterdata = value.filter((item)=>item.id == id)
+     console.log(filterdata);
+     
 
   return (
     <>
-      <Container>
-        <Row style={{height:"70vh"}}>
-          {value.map((items) => (
+     <Container>
+        <Row style={{height:"80vh"}}>
+          {filterdata.map((items) => (
             <>
-              <Col md={6}><img className="img-fluid" src={items.image}/></Col>
-              <Col md={6} className="d-flex justify-content-start align-items-start flex-column mt-5 fs-5">
+              <Col md={6}><img className="w-75" src={ giturl+items.image}/></Col>
+              <Col md={6} className="d-flex justify-content-start align-items-start flex-column mt-5 fs-4">
               <h5>
                   <strong>Name:</strong>
                   {items.name}
@@ -84,17 +51,22 @@ console.log(value);
                 </h5>
                 <p>
                   <strong>category:</strong>
-                  {items.category}
+                  {items.brand}
                 </p>
                 <p>
                   <strong>description:</strong>
                   {items.description}
                 </p>
+                <div>
+
+                <button className="btn col"><strong className="bg-danger">BUY NOW`1</strong></button>
+                <button className="btn "><strong>ADD DO Card</strong></button>
+                </div>
               </Col>
             </>
           ))} 
         </Row>
-      </Container>
+      </Container>
     </>
   );
 }

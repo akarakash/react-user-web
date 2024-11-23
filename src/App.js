@@ -18,7 +18,7 @@ function App() {
         <Navbarr/>
         <Routes>
         <Route path='/' element={<Home/>}/>
-          <Route path='/apipage/:id' element={<Apidata/>}/> 
+          {/* <Route path='/apipage/:id' element={<Apidata/>}/>  */}
           <Route path='/login' element={<Login/>}/>
           <Route path='/productsdetails/:id' element={<Productsdetails/>}/>
           <Route path='/vivopage' element={<Vivopage/>}/>

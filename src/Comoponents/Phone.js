@@ -17,6 +17,7 @@ import one1 from "../image-2/one plus-1.png";
 import one2 from "../image-2/one plus-2.jpeg";
 import one3 from "../image-2/one plus-3.jpeg";
 import one4 from "../image-2/one plus-4.jpeg";
+import { useNavigate } from 'react-router-dom';
 
 import { FaShippingFast } from "react-icons/fa";
 import { RiTyphoonLine } from "react-icons/ri";
@@ -26,7 +27,7 @@ import Reactplayer from './Reactplayer';
 
 function Phone() {
     const giturl ="https://raw.githubusercontent.com/akarakash/react-user-web/refs/heads/main/src/image-2/"
-
+    const navigate = useNavigate();
     const [image, setImage] = useState([]);
 
     useEffect(() => {
@@ -57,7 +58,10 @@ function Phone() {
           console.error("Error fetching data:", error);
         });
     };
-    
+  const handleClick = (id) => {
+    console.log(id);
+    navigate(`/productsdetails/${id}`)
+  };
   return (
     <div>
        <div>
@@ -67,7 +71,7 @@ function Phone() {
         <div className='fs-3 fw-bold my-2'>Apple..</div>
         <Row>
         {image.map(item=>
-            <Col xs={12} md={3}>
+            <Col xs={12} md={3} onClick={() => handleClick(item.id)}>
             <div>
                 <Card  style={{ width: "100%" }}className='mt-4'>
                   <Card.Img variant="top" src={giturl + item.image} className='img'  style={{height:'300px'}}/>
