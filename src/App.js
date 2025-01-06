@@ -10,6 +10,7 @@ import Productsdetails from './Comoponents/Productsdetails';
 import Vivopage from './Comoponents/Vivopage';
 import OnePlus from './Comoponents/Oneplus';
 import IphonePage from './Comoponents/IphonePage';
+import SignupForm from "./Comoponents/SignupForm";
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
           <Route path='/productsdetails/:id' element={<Productsdetails/>}/>
           <Route path='/vivopage' element={<Vivopage/>}/>
            <Route path='/iphonePage' element={<IphonePage/>}/> 
+           <Route path='/signup' element={<SignupForm/>}/>
 
           
           
