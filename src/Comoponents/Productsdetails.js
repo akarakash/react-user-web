@@ -36,7 +36,7 @@ console.log(value);
   return (
     <>
      <Container>
-        <Row style={{height:"80vh"}}>
+        <Row style={{height:"80vh"}} className="mt-5">
           {filterdata.map((items) => (
             <>
               <Col md={6}><img className="w-75" src={ giturl+items.image}/></Col>
@@ -59,8 +59,8 @@ console.log(value);
                 </p>
                 <div>
 
-                <button className="btn col"><strong className="bg-danger">BUY NOW`1</strong></button>
-                <button className="btn "><strong>ADD DO Card</strong></button>
+                <button className="btn col"><strong className=" btn  bg-danger">BUY NOW`1</strong></button>
+                <button className="btn "><strong className="bg-info btn">ADD DO Card</strong></button>
                 </div>
               </Col>
             </>
